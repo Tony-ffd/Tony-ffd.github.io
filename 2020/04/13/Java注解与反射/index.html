@@ -20,30 +20,35 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tony-ffd">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="注解与反射导言：Java是一种静态语言，所谓静态语言就是强类型语言。  (静态语言和动态语言的区别)  我们一般创建对象会直接使用new来创建，但是我们想要动态的创建对象，不知道类名，或者方法名这些的时候怎么办?反射机制可以帮助到我们，注解与反射完美结合，帮助我们把Java语言从静态语言变成准动态语言。 注解注解很简单，也很常见，例如在一个类继承另一个类的时候，会重写另一个类中的方法，在该方法的上">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java注解和反射">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="Tony-ffd">
-<meta property="og:description" content="java">
+<meta property="og:description" content="注解与反射导言：Java是一种静态语言，所谓静态语言就是强类型语言。  (静态语言和动态语言的区别)  我们一般创建对象会直接使用new来创建，但是我们想要动态的创建对象，不知道类名，或者方法名这些的时候怎么办?反射机制可以帮助到我们，注解与反射完美结合，帮助我们把Java语言从静态语言变成准动态语言。 注解注解很简单，也很常见，例如在一个类继承另一个类的时候，会重写另一个类中的方法，在该方法的上">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200413212324687.JPG#pic_center">
+<meta property="article:published_time" content="2020-04-13T15:02:30.992Z">
+<meta property="article:modified_time" content="2020-04-13T15:10:40.315Z">
 <meta property="article:author" content="ffd">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200413212324687.JPG#pic_center">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/04/13/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tony-ffd</title>
+  <title>Java注解和反射 | Tony-ffd</title>
   
 
 
@@ -186,9 +191,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -204,10 +210,9 @@
       <meta itemprop="name" content="Tony-ffd">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/13/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/" class="post-title-link" itemprop="url">Java注解和反射</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Java注解和反射
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -240,7 +245,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="注解与反射"><a href="#注解与反射" class="headerlink" title="注解与反射"></a>注解与反射</h1><h2 id="导言："><a href="#导言：" class="headerlink" title="导言："></a>导言：</h2><p>Java是一种静态语言，所谓静态语言就是强类型语言。</p>
+        <h1 id="注解与反射"><a href="#注解与反射" class="headerlink" title="注解与反射"></a>注解与反射</h1><h2 id="导言："><a href="#导言：" class="headerlink" title="导言："></a>导言：</h2><p>Java是一种静态语言，所谓静态语言就是强类型语言。</p>
 <blockquote>
 <p>(<a href="https://www.cnblogs.com/raind/p/8551791.html" target="_blank" rel="noopener">静态语言和动态语言的区别</a>)</p>
 </blockquote>
@@ -277,174 +282,52 @@
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test03</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, NoSuchFieldException </span>&#123;</span><br><span class="line">        Class c1 = User<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        Annotation[] annotations = c1.getAnnotations();</span><br><span class="line">        <span class="keyword">for</span> (Annotation annotation : annotations) &#123;</span><br><span class="line">            System.out.println(annotation);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//获取value值</span></span><br><span class="line">        EntityConvertData annotation = (EntityConvertData)c1.getAnnotation(EntityConvertData<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(annotation.value());</span><br><span class="line">        <span class="comment">//获取类的属性或者方法的注解的值</span></span><br><span class="line">        <span class="comment">//先获取该方法或属性</span></span><br><span class="line">        Field id = c1.getDeclaredField(<span class="string">"id"</span>);</span><br><span class="line">        FiledAnnotation idAnnotation = id.getAnnotation(FiledAnnotation<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">        System.out.println(idAnnotation.name());</span><br><span class="line">        System.out.println(idAnnotation.type());</span><br><span class="line">        System.out.println(idAnnotation.length());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>通过测试我们虽然并没有真正意义上的得到一个实体类转换为数据库的功能，但是思想就是这样的，我们可以通过注解去动态获取未知类的方法，属性，类名等。动态的到信息后再使用这些信息写一些逻辑代码实现功能就可以了。这就已经接近框架的思想了，注解与反射配合。<br>例如spring，springMVC等框架，使用注解动态得到信息，把得到的信息交给框架的逻辑代码处理，就可以帮我们省去很多繁琐的实现代码。<br>鄙人愚见，感谢客官赏脸看完，正在努力的学生小白，有不对的地方望大佬指正。</p>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%92%8CLamda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ffd">
-      <meta itemprop="description" content="java">
-    </span>
+    <div class="social-list">
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tony-ffd">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/07/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%92%8CLamda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="post-title-link" itemprop="url">静态代理模式和Lamda表达式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-04-07 21:42:03 / Modified: 22:06:57" itemprop="dateCreated datePublished" datetime="2020-04-07T21:42:03+08:00">2020-04-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/code/" itemprop="url" rel="index"><span itemprop="name">code</span></a>
-                </span>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
             </span>
 
-          
-
+            <span class="label">RSS</span>
+          </a>
         </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="静态代理模式和Lamda表达式"><a href="#静态代理模式和Lamda表达式" class="headerlink" title="静态代理模式和Lamda表达式"></a>静态代理模式和Lamda表达式</h1><h2 id="静态代理模式"><a href="#静态代理模式" class="headerlink" title="静态代理模式"></a>静态代理模式</h2><p>我们用鸣人结婚来举例吧，在火影大战后，鸣人立下了赫赫战功。现任卡卡西想要退位泡温泉，鸣人当然是准备接受火影之位了。但是此时与雏田的婚礼也急需要准备，鸣人当然忙不过来了。此时，出现了一个很牛逼的一条龙服务公司帮助鸣人筹划婚礼，让鸣人可以不再分心。<br><img src="https://img-blog.csdnimg.cn/20200407213145527.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjEwNTI5,size_16,color_FFFFFF,t_70#pic_center" alt="woman"><br>我们先定义一个结婚的功能。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个接口实现结婚功能</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>鸣人要结婚，所以鸣人要实现这个接口。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个鸣人类实现结婚功能的接口，鸣人是委托者</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Naruto</span> <span class="keyword">implements</span> <span class="title">Marry</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"哪里痛和雏田结婚了！！！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>一条龙婚庆公司当然也具有办婚礼的功能了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个婚庆公司作为代理对象</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WeddingCompany</span> <span class="keyword">implements</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Marry target;<span class="comment">//接受结婚对象，就是委托者</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeddingCompany</span><span class="params">(Marry target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span> </span>&#123;<span class="comment">//一条龙婚庆服务</span></span><br><span class="line">        before();</span><br><span class="line">        <span class="keyword">this</span>.target.happyMarry();<span class="comment">//这就是真实结婚对象</span></span><br><span class="line">        after();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"婚礼结束，结账"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"婚礼之前，布置现场"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticProxy</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">   	    Naruto mingren = <span class="keyword">new</span> Naruto();<span class="comment">//实例化鸣人</span></span><br><span class="line">        WeddingCompany weddingCompany = <span class="keyword">new</span> WeddingCompany(mingren);<span class="comment">//实例化婚庆公司</span></span><br><span class="line">        weddingCompany.happyMarry();<span class="comment">//婚庆公司举办婚礼</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果如下：<br><img src="https://img-blog.csdnimg.cn/20200407210103267.JPG" alt="运行结果"><br>这就是我认为的静态代理，婚庆公司就是代理者，鸣人就是委托者，正真结婚的对象其实还是鸣人，代理对象要接收委托对象就像是婚庆公司接受鸣人的委托。</p>
-<h2 id="Lamda表达式"><a href="#Lamda表达式" class="headerlink" title="Lamda表达式"></a>Lamda表达式</h2><p>我们在写代码的时候总是在想着让代码更高效率，代码量少一点。但是，我们总是要为了调用方法去创建类，写一点代码一堆new，这样就显的代码很繁琐。就用上面的例子不断简化：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticProxy</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"><span class="comment">//        1.创建具体对象，再调用方法</span></span><br><span class="line"><span class="comment">//        Naruto mingren = new Naruto();</span></span><br><span class="line"><span class="comment">//        WeddingCompany weddingCompany = new WeddingCompany(mingren);</span></span><br><span class="line"><span class="comment">//        weddingCompany.happyMarry();</span></span><br><span class="line"><span class="comment">//        2.用匿名对象调用方法</span></span><br><span class="line"><span class="comment">//        new WeddingCompany(new Naruto()).happyMarry();</span></span><br><span class="line"><span class="comment">//        3.使用功能接口，直接省去写Naruto类，直接提交委托内容</span></span><br><span class="line"><span class="comment">//        new WeddingCompany(new Marry() &#123;</span></span><br><span class="line"><span class="comment">//            @Override</span></span><br><span class="line"><span class="comment">//            public void happyMarry() &#123;</span></span><br><span class="line"><span class="comment">//                System.out.println("哪里痛和雏田结婚了");</span></span><br><span class="line"><span class="comment">//            &#125;</span></span><br><span class="line"><span class="comment">//        &#125;).happyMarry();</span></span><br><span class="line"><span class="comment">//       4.使用Lambda表达式，更加牛逼(☆▽☆)</span></span><br><span class="line">        <span class="keyword">new</span> WeddingCompany(()-&gt; System.out.println(<span class="string">"哪里痛和雏田结婚了"</span>)).happyMarry();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个接口实现结婚功能</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个鸣人类实现结婚功能的接口，鸣人是委托者</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Naruto</span> <span class="keyword">implements</span> <span class="title">Marry</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"哪里痛和雏田结婚了！！！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个婚庆公司作为代理对象</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WeddingCompany</span> <span class="keyword">implements</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Marry target;<span class="comment">//接受结婚对象，就是委托者</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WeddingCompany</span><span class="params">(Marry target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span> </span>&#123;<span class="comment">//一条龙婚庆服务</span></span><br><span class="line">        before();</span><br><span class="line">        <span class="keyword">this</span>.target.happyMarry();<span class="comment">//这就是真实结婚对象</span></span><br><span class="line">        after();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"婚礼结束，结账"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"婚礼之前，布置现场"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在不断简化后，突然发现，我们已经可以不用去专门定义鸣人类了，代码在不断减少，但是功能依然实现，我们的目的就达到了。<br>lambda 表达式的语法格式如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(parameters) -&gt; expression</span><br><span class="line">或</span><br><span class="line">(parameters) -&gt;&#123; statements; &#125;</span><br></pre></td></tr></table></figure>
-<p>==Lamda表达式的使用前提：函数式接口==<br>函数式接口就是只实现一个方法的接口，such as:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个接口实现结婚功能</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>感谢客官赏脸看完，学的不乍地的学生小白，有不对的地方望大佬指正。<br>话说鸣人有多重影分身哈哈哈，白忙活了半天。</p>
-
-      
     </div>
+  </div>
 
-    
-    
-    
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/07/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%92%8CLamda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="prev" title="静态代理模式和Lamda表达式">
+      <i class="fa fa-chevron-left"></i> 静态代理模式和Lamda表达式
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ffd">
-      <meta itemprop="description" content="java">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tony-ffd">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/07/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-04-07 12:47:39 / Modified: 16:28:53" itemprop="dateCreated datePublished" datetime="2020-04-07T12:47:39+08:00">2020-04-07</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -497,6 +380,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#注解与反射"><span class="nav-number">1.</span> <span class="nav-text">注解与反射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导言："><span class="nav-number">1.1.</span> <span class="nav-text">导言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注解"><span class="nav-number">1.2.</span> <span class="nav-text">注解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元注解"><span class="nav-number">1.2.1.</span> <span class="nav-text">元注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义注解"><span class="nav-number">1.2.2.</span> <span class="nav-text">自定义注解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射"><span class="nav-number">1.3.</span> <span class="nav-text">反射</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获得Class类的方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">获得Class类的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接下来就要开启正餐了，使用反射的到类的实例化对象，类的方法，类的属性。-（重点）"><span class="nav-number">1.3.2.</span> <span class="nav-text">&#x3D;&#x3D;接下来就要开启正餐了，使用反射的到类的实例化对象，类的方法，类的属性。&#x3D;&#x3D;（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#反射得到泛型，这个相对比较麻烦，可以选择性的看，仅供参考："><span class="nav-number">1.3.3.</span> <span class="nav-text">反射得到泛型，这个相对比较麻烦，可以选择性的看，仅供参考：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习使用反射和注解（结合使用）"><span class="nav-number">1.4.</span> <span class="nav-text">练习使用反射和注解（结合使用）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#先定义注解"><span class="nav-number">1.4.1.</span> <span class="nav-text">先定义注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义一个实体类，使用上面的注解"><span class="nav-number">1.4.2.</span> <span class="nav-text">定义一个实体类，使用上面的注解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">1.4.3.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">1.5.</span> <span class="nav-text">总结：</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
