@@ -3,7 +3,9 @@
   <entry>
     <title>Hello World</title>
     <url>/2020/04/07/hello-world/</url>
-    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -20,7 +22,8 @@
   <entry>
     <title>静态代理模式和Lamda表达式</title>
     <url>/2020/04/07/%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E5%92%8CLamda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
-    <content><![CDATA[<h1 id="静态代理模式和Lamda表达式"><a href="#静态代理模式和Lamda表达式" class="headerlink" title="静态代理模式和Lamda表达式"></a>静态代理模式和Lamda表达式</h1><h2 id="静态代理模式"><a href="#静态代理模式" class="headerlink" title="静态代理模式"></a>静态代理模式</h2><p>我们用鸣人结婚来举例吧，在火影大战后，鸣人立下了赫赫战功。现任卡卡西想要退位泡温泉，鸣人当然是准备接受火影之位了。但是此时与雏田的婚礼也急需要准备，鸣人当然忙不过来了。此时，出现了一个很牛逼的一条龙服务公司帮助鸣人筹划婚礼，让鸣人可以不再分心。<br><img src="https://img-blog.csdnimg.cn/20200407213145527.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjEwNTI5,size_16,color_FFFFFF,t_70#pic_center" alt="woman"><br>我们先定义一个结婚的功能。</p>
+    <content><![CDATA[<h1 id="静态代理模式和Lamda表达式"><a href="#静态代理模式和Lamda表达式" class="headerlink" title="静态代理模式和Lamda表达式"></a>静态代理模式和Lamda表达式</h1><a id="more"></a>
+<h2 id="静态代理模式"><a href="#静态代理模式" class="headerlink" title="静态代理模式"></a>静态代理模式</h2><p>我们用鸣人结婚来举例吧，在火影大战后，鸣人立下了赫赫战功。现任卡卡西想要退位泡温泉，鸣人当然是准备接受火影之位了。但是此时与雏田的婚礼也急需要准备，鸣人当然忙不过来了。此时，出现了一个很牛逼的一条龙服务公司帮助鸣人筹划婚礼，让鸣人可以不再分心。<br><img src="https://img-blog.csdnimg.cn/20200407213145527.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NjEwNTI5,size_16,color_FFFFFF,t_70#pic_center" alt="woman"><br>我们先定义一个结婚的功能。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建一个接口实现结婚功能</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Marry</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>鸣人要结婚，所以鸣人要实现这个接口。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建一个鸣人类实现结婚功能的接口，鸣人是委托者</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Naruto</span> <span class="keyword">implements</span> <span class="title">Marry</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">happyMarry</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"哪里痛和雏田结婚了！！！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -47,7 +50,8 @@
   <entry>
     <title>Java注解和反射</title>
     <url>/2020/04/13/Java%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84/</url>
-    <content><![CDATA[<h1 id="注解与反射"><a href="#注解与反射" class="headerlink" title="注解与反射"></a>注解与反射</h1><h2 id="导言："><a href="#导言：" class="headerlink" title="导言："></a>导言：</h2><p>Java是一种静态语言，所谓静态语言就是强类型语言。</p>
+    <content><![CDATA[<h1 id="注解与反射"><a href="#注解与反射" class="headerlink" title="注解与反射"></a>注解与反射</h1><a id="more"></a>
+<h2 id="导言："><a href="#导言：" class="headerlink" title="导言："></a>导言：</h2><p>Java是一种静态语言，所谓静态语言就是强类型语言。</p>
 <blockquote>
 <p>(<a href="https://www.cnblogs.com/raind/p/8551791.html" target="_blank" rel="noopener">静态语言和动态语言的区别</a>)</p>
 </blockquote>
