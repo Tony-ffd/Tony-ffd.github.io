@@ -1,11 +1,11 @@
 
-name: 部署文档
+name: CI Tony-ffd Blog
 
 on:
   push:
     branches:
       # 确保这是你正在使用的分支名称
-      - main
+      - master
 
 jobs:
   deploy-gh-pages:
